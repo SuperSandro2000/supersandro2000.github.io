@@ -20,11 +20,11 @@
         </a>
       </div>
     {% endif %}
-    {% if user.email %}
+    {% if site.email %}
       <div class="{{ metadata_styles }}">
         {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
-        <a href="mailto:{{ user.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
-          {{ user.email }}
+        <a rel="me" href="mailto:{{ site.email }}" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+          {{ site.email }}
         </a>
       </div>
     {% endif %}
