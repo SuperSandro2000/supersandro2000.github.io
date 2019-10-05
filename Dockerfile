@@ -6,9 +6,6 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-#RUN apt-get update -q \
-#  && --no-install-recommends -qy g++ make
-
 COPY Gemfile Gemfile.lock /build/
 
 WORKDIR /build
@@ -21,5 +18,14 @@ COPY . /build/
 
 RUN bundle exec jekyll build
 
+#---------------#
+
 FROM httpd:alpine
+
+RUN printf "\
+<Directory \"/usr/local/apache2/htdocs\">\n\
+    AllowOverride FileInfo=Header\n\
+</Directory>\n\
+" >>/usr/local/apache2/conf/httpd.conf
+
 COPY --from=builder /build/_site/ /usr/local/apache2/htdocs/
