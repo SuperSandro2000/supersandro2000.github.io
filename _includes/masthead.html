@@ -30,7 +30,7 @@
     {% endif %}
     {% if site.pgp_key_id %}
       <div class="{{ metadata_styles }}">
-        {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:email %}
+        {% octicon lock height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:gpg-key %}
         <a href="/{{ site.pgp_key_id }}.asc" {% if site.style == 'dark' %}class="text-white"{% endif %}>
           {{ site.pgp_key_id }}
         </a>
