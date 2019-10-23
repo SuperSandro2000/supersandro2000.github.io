@@ -26,6 +26,7 @@ RUN printf "\
 <Directory \"/usr/local/apache2/htdocs\">\n\
     AllowOverride FileInfo=Header\n\
 </Directory>\n\
+LoadModule rewrite_module modules/mod_rewrite.so\n\
 " >>/usr/local/apache2/conf/httpd.conf
 
 COPY --from=builder /build/_site/ /usr/local/apache2/htdocs/
