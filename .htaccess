@@ -7,8 +7,8 @@
   RewriteEngine on
 
   # redirects for Nextcloud
-  RewriteRule ^\.well-known/carddav https://nextcloud.supersandro.de/remote.php/dav/ [R=301,L]
   RewriteRule ^\.well-known/caldav https://nextcloud.supersandro.de/remote.php/dav/ [R=301,L]
+  RewriteRule ^\.well-known/carddav https://nextcloud.supersandro.de/remote.php/dav/ [R=301,L]
 
   # redirects for mastodon
   RewriteRule ^\.well-known/host-meta https://mastodon.supersandro.de/.well-known/host-meta [R=301,L]
