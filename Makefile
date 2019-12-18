@@ -15,7 +15,7 @@ build:
 .PHONY: dev
 dev:
 	$(SUDO) docker build . -f dev.Dockerfile -t personal-website-dev
-	$(SUDO) docker run -p 4000:4000 personal-website-dev
+	$(SUDO) docker run --rm -p 4000:4000 personal-website-dev
 
 .PHONY: all
 all: build
