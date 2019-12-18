@@ -15,4 +15,4 @@ RUN gem install bundler:">2" \
 
 COPY . /build/
 
-CMD [ "bundle", "exec", "jekyll", "serve" ]
+CMD [ "bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0" ]
