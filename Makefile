@@ -10,11 +10,11 @@ primer:
 
 .PHONY: build
 build:
-	$(SUDO) docker build .
+	$(SUDO) docker build . --pull
 
 .PHONY: dev
 dev:
-	$(SUDO) docker build . -f dev.Dockerfile -t personal-website-dev
+	$(SUDO) docker build . --pull -f dev.Dockerfile -t personal-website-dev
 	$(SUDO) docker run --rm -p 4000:4000 personal-website-dev
 
 .PHONY: all
