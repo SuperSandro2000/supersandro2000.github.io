@@ -18,5 +18,4 @@ dev:
 	$(SUDO) docker run -p 4000:4000 personal-website-dev
 
 .PHONY: all
-all:
-	all: build
+all: build
