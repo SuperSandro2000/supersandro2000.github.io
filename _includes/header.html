@@ -29,5 +29,22 @@
     <meta property="og:description" content="{{ meta_description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{ "/assets/styles.css" | relative_url }}" rel="stylesheet" type="text/css">
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["disableCookies"]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//matomo.supersandro.de/";
+	_paq.push(['setTrackerUrl', u+'matomo.php']);
+	_paq.push(['setSiteId', '1']);
+	var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+  </script>
+  <noscript><p><img src="//matomo.supersandro.de/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Matomo Code -->
   </head>
   <body class="bg-white min-height-full" {% if site.style == 'dark' %}style="background-color: #2f363d !important"{% endif %}>
