@@ -10,7 +10,7 @@ primer:
 
 _posts/2019-12-18-useful-links.md: _posts/_2019-12-18-useful-links.md _useful-links/README.md
 	cat _posts/_2019-12-18-useful-links.md >$@
-	cat _useful-links/README.md >>$@
+	tail _useful-links/README.md -n +5 >>$@
 
 .PHONY: build
 build: _posts/2019-12-18-useful-links.md
