@@ -26,7 +26,13 @@ RUN printf "\
 <Directory \"/usr/local/apache2/htdocs\">\n\
     AllowOverride FileInfo=Header\n\
 </Directory>\n\
+\n\
 LoadModule rewrite_module modules/mod_rewrite.so\n\
+LoadModule proxy_module modules/mod_proxy.so\n\
+LoadModule proxy_http_module modules/mod_proxy_http.so\n\
+LoadModule ssl_module modules/mod_ssl.so\n\
+\n\
+SSLProxyEngine on\n\
 " >>/usr/local/apache2/conf/httpd.conf
 
 COPY --from=builder /build/_site/ /usr/local/apache2/htdocs/

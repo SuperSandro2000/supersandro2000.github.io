@@ -7,10 +7,10 @@
   RewriteEngine on
 
   # redirects for Nextcloud
-  RewriteRule ^\.well-known/caldav https://nextcloud.supersandro.de/remote.php/dav/ [R=301,L]
-  RewriteRule ^\.well-known/carddav https://nextcloud.supersandro.de/remote.php/dav/ [R=301,L]
+  RewriteRule ^\.well-known/caldav https://nextcloud.supersandro.de/remote.php/dav/ [P,L]
+  RewriteRule ^\.well-known/carddav https://nextcloud.supersandro.de/remote.php/dav/ [P,L]
 
   # redirects for mastodon
-  RewriteRule ^\.well-known/host-meta https://mastodon.supersandro.de/.well-known/host-meta [R=301,L]
-  RewriteRule ^\.well-known/webfinger https://mastodon.supersandro.de/.well-known/webfinger [QSA,L]
+  RewriteRule ^\.well-known/host-meta https://mastodon.supersandro.de/.well-known/host-meta [P,L]
+  RewriteRule ^\.well-known/webfinger https://mastodon.supersandro.de/.well-known/webfinger [P,QSA,L]
 </IfModule>
