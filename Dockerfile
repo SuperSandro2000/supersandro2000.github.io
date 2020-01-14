@@ -26,7 +26,7 @@ FROM httpd:alpine
 
 RUN printf "\
 <Directory \"/usr/local/apache2/htdocs\">\n\
-    AllowOverride FileInfo=Header\n\
+    AllowOverride FileInfo=Header AuthConfig=BasicAuth\n\
 </Directory>\n\
 \n\
 LoadModule rewrite_module modules/mod_rewrite.so\n\
