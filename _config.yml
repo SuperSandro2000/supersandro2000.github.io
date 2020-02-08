@@ -7,7 +7,7 @@ plugins:
   - jemoji
 
 exclude: [ Dockerfile, Gemfile, Gemfile.lock, LICENSE.txt, README.md ]
-include: [ .htaccess, .htpasswd ]
+include: [ .htaccess, .htpasswd, .well-known ]
 repository: supersandro2000/supersandro2000.github.io
 email: sandro.jaeckel@posteo.de
 pgp_key_id: "0x236b6291555e8401"
