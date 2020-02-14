@@ -1,3 +1,5 @@
+Options -Indexes
+
 # display gpg key files (asc) as text
 <Files "*.asc">
   AddType text/plain .asc
