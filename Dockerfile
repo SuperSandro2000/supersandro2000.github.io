@@ -29,6 +29,7 @@ RUN printf "\
     AllowOverride AuthConfig FileInfo Options\n\
 </Directory>\n\
 \n\
+LoadModule headers_module modules/mod_headers.so\n\
 LoadModule rewrite_module modules/mod_rewrite.so\n\
 LoadModule proxy_module modules/mod_proxy.so\n\
 LoadModule proxy_http_module modules/mod_proxy_http.so\n\
