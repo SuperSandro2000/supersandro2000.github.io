@@ -22,20 +22,7 @@ RUN bundle exec jekyll build
 
 #---------------#
 
-FROM httpd:alpine
+FROM nginx:mainline
 
-RUN printf "\
-<Directory \"/usr/local/apache2/htdocs\">\n\
-    AllowOverride AuthConfig FileInfo Options\n\
-</Directory>\n\
-\n\
-LoadModule headers_module modules/mod_headers.so\n\
-LoadModule rewrite_module modules/mod_rewrite.so\n\
-LoadModule proxy_module modules/mod_proxy.so\n\
-LoadModule proxy_http_module modules/mod_proxy_http.so\n\
-LoadModule ssl_module modules/mod_ssl.so\n\
-\n\
-SSLProxyEngine on\n\
-" >>/usr/local/apache2/conf/httpd.conf
-
-COPY --from=builder /build/_site/ /usr/local/apache2/htdocs/
+COPY [ "default.conf", "/etc/nginx/conf.d/default.conf" ]
+COPY --from=builder [ "/build/_site/", "/usr/share/nginx/html/" ]
