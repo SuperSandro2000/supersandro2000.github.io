@@ -24,5 +24,5 @@ RUN bundle exec jekyll build
 
 FROM nginx:mainline
 
-COPY [ "default.conf", "/etc/nginx/conf.d/default.conf" ]
 COPY --from=builder [ "/build/_site/", "/usr/share/nginx/html/" ]
+COPY [ "default.conf", "/etc/nginx/conf.d/default.conf" ]
