@@ -6,7 +6,7 @@ plugins:
   - jekyll-github-metadata
   - jemoji
 
-exclude: [ Dockerfile, Gemfile, Gemfile.lock, LICENSE.txt, README.md ]
+exclude: [ default.conf, Dockerfile, Gemfile, Gemfile.lock, LICENSE.txt, README.md ]
 include: [ .htaccess, .htpasswd, .well-known ]
 repository: supersandro2000/supersandro2000.github.io
 email: sandro.jaeckel@posteo.de
