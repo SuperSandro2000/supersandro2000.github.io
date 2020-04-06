@@ -23,11 +23,11 @@ update: submodules _posts/2019-12-18-useful-links.md primer
 
 .PHONY: build
 build: _posts/2019-12-18-useful-links.md
-	$(SUDO) docker build . --pull
+	$(SUDO) docker build . --pull --build-arg JEKYLL_GITHUB_TOKEN
 
 .PHONY: dev
 dev: _posts/2019-12-18-useful-links.md
-	$(SUDO) docker build . --pull -f dev.Dockerfile -t personal-website-dev
+	$(SUDO) docker build . --pull -f dev.Dockerfile -t personal-website-dev --build-arg JEKYLL_GITHUB_TOKEN
 	$(SUDO) docker run --rm -p 4000:4000 personal-website-dev
 
 .PHONY: all
