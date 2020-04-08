@@ -1,3 +1,4 @@
 User-Agent: *
 Disallow: /.well-known
 Disallow: /_matrix
+Allow: /
