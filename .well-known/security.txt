@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:sandro@supersandro.de
+Encryption: https://supersandro.de/0x236b6291555e8401.asc
+Preferred-Languages: en, de
+Canonical: https://supersandro.de/.well-known/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEhxQmicBftapI7EklOvWkOj7swuUFAl6OZRcACgkQOvWkOj7s
+wuWktg/9Gqxp90GfU3y9Av9YiSP5zktaaL/0xW3knwZQ44fe8NmYVb8qiA8+D2BG
+ZXxXYK5zwR82FJfUEA+6W+Ud7TF8yPg93sv4E6cUWV4yf0IS1gN6Ziji8jZl1gK7
+IzPIp1MWCO29OWSB/nPY36j7yUheC2AUK4OTvM4QZKBhx9WWSVAMJSq6TDJXLiuk
+LB+iiMP2ivwEPNze4KxXZYBrnz7piqquJOEOYiDYMro03qZaXurIpHj13F5SDuHb
+8oZ0nsaDQncHzGClMXPH/NY0HjfKjMor3u02LKKey3uZI00RKpwV/znYZJf1VZEV
+864or479w4NSDfV1ix2v1ofb0Cp2igxGV8X3Xl0cHXyYVUrmdklJdf1VpXqVfk11
+KPFlQXa9SRj/mSrmYyebvFfzqjTut04JpMbJCLMsb2HwyT2S6aVkW76naRqBq6Hw
+DbZV1qR0hmhZUbBp/03P7BnEq/97ArgCZT+Fgz+56Fur1SWQ4lIhDDJ9Iwoq4mcD
+s9TrPnuOqfi3B2kj+podqUQFWYMZh8eB2eKTy/ZR15OnN3qbXFL0mVd5IvfB65GE
+MOJOzfa81yz2yaNjrMFrLjVRLeTZOYA/jR5vOhhz989ZcUDqWwXw/F/vzGcg5bBj
+4KZY7hQgY7vqTqp3DpbO9+xs7fTY26IpuZf5Z7xm5S6YqPTdJhs=
+=TYTH
+-----END PGP SIGNATURE-----
