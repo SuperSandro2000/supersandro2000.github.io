@@ -26,7 +26,7 @@
         {% assign company = user.company | split: " " %}
         {% for part in company %}
           {% if part contains "@" %}
-            <a {% if site.style == 'dark' %}class="text-white"{% endif %} href="https://github.com/{{ part | replace: '@', '' }}">{{ part | replace: '@', '' | append: '&nbsp;' }}</a>
+            <a {% if site.style == 'dark' %}class="text-white"{% endif %} href="https://github.com/{{ part | replace: '@', '' | escape }}">{{ part | replace: '@', '' | append: '&nbsp;' | escape }}</a>
           {% else %}
             {{ part | append: '&nbsp;' }}
           {% endif %}
