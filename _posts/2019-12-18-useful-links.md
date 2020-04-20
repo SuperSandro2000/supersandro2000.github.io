@@ -32,6 +32,10 @@ A collection of links that I find useful. Also available in [GitHub](https://git
 
 * [Unlock with Dropbear](https://hamy.io/post/0009/how-to-install-luks-encrypted-ubuntu-18.04.x-server-and-enable-remote-unlocking/=)
 
+## NGINX
+
+* [Nginx location match tester](https://nginx.viraptor.info/)
+
 ## Python
 
 * [Python Cheatsheet](https://gto76.github.io/python-cheatsheet/)
