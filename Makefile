@@ -6,7 +6,7 @@ SUDO ?= $(shell if ! groups | grep -q docker; then echo 'sudo --preserve-env=DOC
 
 .PHONY: primer
 primer:
-	wget https://unpkg.com/primer/build/build.css -O _sass/_build.scss
+	wget https://cdnjs.cloudflare.com/ajax/libs/Primer/14.3.0/primer.min.css -O _sass/_build.scss
 
 .ONESHELL: submodules
 .PHONY: submodules
