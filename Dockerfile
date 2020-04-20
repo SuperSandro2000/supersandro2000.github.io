@@ -12,12 +12,12 @@ RUN apk add --no-cache g++ make musl-dev \
 COPY Gemfile Gemfile.lock /build/
 
 WORKDIR /build
-
 RUN bundle config --global frozen 1 \
   && bundle install
 
 COPY . /build/
 
+ARG JEKYLL_GITHUB_TOKEN
 RUN bundle exec jekyll build
 
 #---------------#
