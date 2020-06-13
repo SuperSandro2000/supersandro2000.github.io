@@ -6,13 +6,18 @@ ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
-RUN apk add --no-cache g++ make musl-dev \
+RUN apk add --no-cache \
+    g++ \
+    libxslt-dev \
+    make \
+    musl-dev \
   && gem install bundler:">2"
 
 COPY Gemfile Gemfile.lock /build/
 
 WORKDIR /build
 RUN bundle config --global frozen 1 \
+  && bundle config build.nokogiri --use-system-libraries \
   && bundle install
 
 COPY . /build/
