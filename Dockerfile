@@ -11,6 +11,7 @@ RUN apk add --no-cache \
     libxslt-dev \
     make \
     musl-dev \
+    nodejs \
   && gem install bundler:">2"
 
 COPY Gemfile Gemfile.lock /build/

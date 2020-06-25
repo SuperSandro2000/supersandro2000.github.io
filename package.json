@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "purgecss": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperSandro2000/supersandro2000.github.io.git"
+  },
+  "author": "SuperSandro2000",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SuperSandro2000/supersandro2000.github.io/issues"
+  },
+  "homepage": "https://github.com/SuperSandro2000/supersandro2000.github.io#readme"
+}

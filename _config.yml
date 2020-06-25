@@ -1,20 +1,36 @@
 layout: sidebar
 style: dark
 
-plugins:
-  - jekyll-octicons
-  - jekyll-github-metadata
-  - jemoji
+exclude:
+  - default.conf
+  - CNAME
+  - dev.Dockerfile
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - Makefile
+  - node_modules
+  - package.json
+  - package-lock.json
+  - purgecss.config.js
+  - README.md
+include:
+  - .htacces
+  - .htpasswd
+  - .well-known
 
-exclude: [ default.conf, Dockerfile, Gemfile, Gemfile.lock, LICENSE.txt, README.md ]
-include: [ .htaccess, .htpasswd, .well-known ]
-repository: supersandro2000/supersandro2000.github.io
-email: sandro.jaeckel@posteo.de
-pgp_key_id: "0x236b6291555e8401"
+css_dir: assets/css
+sass:
+   sourcemap: never
 
 url: "https://supersandro.de"
 baseurl: ""
 permalink: /:year/:month/:day/:title/
+
+repository: supersandro2000/supersandro2000.github.io
+email: sandro.jaeckel@posteo.de
+pgp_key_id: "0x236b6291555e8401"
 
 defaults:
   - scope:
