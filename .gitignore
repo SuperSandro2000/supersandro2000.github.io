@@ -1,6 +1,7 @@
 *.gem
+**/.ruby-version
+
 .bundle
 .sass-cache
 _site/
-**/.ruby-version
 node_modules/

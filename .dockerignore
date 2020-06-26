@@ -1,4 +1,12 @@
-.git
 *Dockerfile
-Makefile
+
+.export-gpg-key.sh
+.get-primer-build-css.sh
+.git*
+.sass-cache/
+_site/
 CNAME
+LICENSE.txt
+Makefile
+node_modules/
+README.md
