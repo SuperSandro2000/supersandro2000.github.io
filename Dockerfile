@@ -11,17 +11,19 @@ RUN apk add --no-cache \
     libxslt-dev \
     make \
     musl-dev \
-    nodejs \
+    npm \
   && gem install bundler:">2"
 
-COPY Gemfile Gemfile.lock /build/
-
 WORKDIR /build
+COPY [ "package.json", "package-lock.json", "/build/" ]
+RUN npm install
+
+COPY [ "Gemfile", "Gemfile.lock", "/build/" ]
 RUN bundle config --global frozen 1 \
   && bundle config build.nokogiri --use-system-libraries \
   && bundle install
 
-COPY . /build/
+COPY [ ".", "/build/" ]
 
 ARG JEKYLL_GITHUB_TOKEN
 RUN bundle exec jekyll build
