@@ -12,6 +12,7 @@ RUN apk add --no-cache \
     make \
     musl-dev \
     npm \
+    sed \
   && gem install bundler:">2"
 
 WORKDIR /build
@@ -21,7 +22,10 @@ RUN npm install
 COPY [ "Gemfile", "Gemfile.lock", "/build/" ]
 RUN bundle config --global frozen 1 \
   && bundle config build.nokogiri --use-system-libraries \
-  && bundle install
+  && bundle install \
+# monkey patch github-pages gem to allow any plugin to be loaded
+  && sed -i 's/^.*"plugins_dir" =>.*$/      "plugins_dir" => "_plugins",/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb \
+  && sed -i 's/^.*"safe" =>.*$/      "safe" => false,/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb
 
 COPY [ ".", "/build/" ]
 

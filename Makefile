@@ -30,5 +30,14 @@ dev: _posts/2019-12-18-useful-links.md
 	$(SUDO) docker build . --pull -f dev.Dockerfile -t personal-website-dev --build-arg JEKYLL_GITHUB_TOKEN
 	$(SUDO) docker run --rm -p 4000:4000 personal-website-dev
 
+.PHONY: patch
+patch:
+	$(shell sed -i 's/^.*"plugins_dir" =>.*$/      "plugins_dir" => "_plugins",/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb)
+	$(shell sed -i 's/^.*"safe" =>.*$/      "safe" => false,/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb)
+
+.PHONY: clean
+clean:
+	rm -rf _site/
+
 .PHONY: all
 all: build

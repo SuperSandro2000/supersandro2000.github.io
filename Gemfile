@@ -5,3 +5,5 @@ group :jekyll_plugins do
   gem 'jekyll-octicons'
   gem 'jekyll-purgecss'
 end
+
+gem "down", "~> 5.1"

@@ -19,6 +19,8 @@ GEM
     concurrent-ruby (1.1.6)
     dnsruby (1.61.3)
       addressable (~> 2.5)
+    down (5.1.1)
+      addressable (~> 2.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -249,6 +251,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  down (~> 5.1)
   github-pages
   jekyll-octicons
   jekyll-purgecss
