@@ -1,6 +1,9 @@
 layout: sidebar
 style: dark
 
+plugins:
+  - jekyll-octicons
+
 exclude:
   - default.conf
   - CNAME
