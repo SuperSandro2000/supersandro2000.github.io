@@ -24,8 +24,8 @@ RUN bundle config --global frozen 1 \
   && bundle config build.nokogiri --use-system-libraries \
   && bundle install \
 # monkey patch github-pages gem to allow any plugin to be loaded
-  && sed -i 's/^.*"plugins_dir" =>.*$/      "plugins_dir" => "_plugins",/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb \
-  && sed -i 's/^.*"safe" =>.*$/      "safe" => false,/gm' $GEM_HOME/gems/github-pages-206/lib/github-pages/configuration.rb
+  && sed -i 's/^.*"plugins_dir" =>.*$/      "plugins_dir" => "_plugins",/gm' $GEM_HOME/gems/github-pages-*/lib/github-pages/configuration.rb \
+  && sed -i 's/^.*"safe" =>.*$/      "safe" => false,/gm' $GEM_HOME/gems/github-pages-*/lib/github-pages/configuration.rb
 
 COPY [ ".", "/build/" ]
 
