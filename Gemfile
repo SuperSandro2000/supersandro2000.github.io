@@ -6,4 +6,4 @@ group :jekyll_plugins do
   gem 'jekyll-purgecss'
 end
 
-gem "down", "~> 5.1"
+gem "down", "~> 5.2"
