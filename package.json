@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuperSandro2000/supersandro2000.github.io.git"
+    "url": "git+https://github.com/SuperSandro2000/supersandro2000.de.git"
   },
   "author": "SuperSandro2000",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SuperSandro2000/supersandro2000.github.io/issues"
+    "url": "https://github.com/SuperSandro2000/supersandro2000.de/issues"
   },
-  "homepage": "https://github.com/SuperSandro2000/supersandro2000.github.io#readme"
+  "homepage": "https://github.com/SuperSandro2000/supersandro2000.de#readme"
 }
