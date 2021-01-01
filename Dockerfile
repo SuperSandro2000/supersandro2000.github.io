@@ -1,4 +1,4 @@
-FROM ruby:alpine as builder
+FROM ruby:2-alpine as builder
 
 ENV JEKYLL_ENV=production
 # fix some weird locale issue. See https://github.com/jekyll/jekyll/issues/4268#issuecomment-167406574
