@@ -62,10 +62,10 @@ module Jekyll
         img_dir_rel = File.join('assets', 'img')
         img_dir = File.join(site.dest, img_dir_rel)
         img_path = File.join(img_dir, img_file)
-  
+
         # Prevent Jekyll from erasing our generated files
         site.config['keep_files'] << img_dir_rel unless site.config['keep_files'].include?(img_dir_rel)
-  
+
         FileUtils.mkdir_p(img_dir)
         Jekyll.logger.debug('Image:', "Downloading #{img_url}")
         file = Down.download(img_url)
@@ -74,7 +74,7 @@ module Jekyll
         FileUtils.chmod(0644, img_path)
         file.unlink
         Jekyll.logger.debug('Image:', "Moved image to #{img_path}")
-  
+
         "<img src=\"\/#{File.join(img_dir_rel, img_file)}?#{digest}\" #{html_attr_string}>"
       else
         "<img src=\"\/#{instance[:src]}\" #{html_attr_string}>"
