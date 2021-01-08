@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := all
 MAKEFLAGS=--warn-undefined-variables
-SHELL := /bin/bash
+SHELL := bash
 
 SUDO ?= $(shell if ! groups | grep -q docker; then echo 'sudo --preserve-env=DOCKER_BUILDKIT,JEKYLL_GITHUB_TOKEN'; fi)
 
