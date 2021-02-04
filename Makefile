@@ -21,9 +21,13 @@ _posts/2019-12-18-useful-links.md: _posts/_2019-12-18-useful-links.md _useful-li
 .PHONY: update
 update: submodules _posts/2019-12-18-useful-links.md primer
 
+.PHONY: build-docker
+build-docker: _posts/2019-12-18-useful-links.md
+	$(SUDO) docker build . --pull --build-arg JEKYLL_GITHUB_TOKEN -t website
+
 .PHONY: build
 build: _posts/2019-12-18-useful-links.md
-	$(SUDO) docker build . --pull --build-arg JEKYLL_GITHUB_TOKEN -t website
+	bundle exec jekyll build
 
 .PHONY: dev
 dev: _posts/2019-12-18-useful-links.md
