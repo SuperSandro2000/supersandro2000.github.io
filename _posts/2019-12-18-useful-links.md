@@ -44,6 +44,11 @@ A collection of links that I find useful. Also available in [GitHub](https://git
 
 * [Rubular](http://rubular.com): regular expression editor
 
+## SpeedTests
+
+* [fast](https://fast.com)
+* [LibreSpeed](https://librespeed.org/)
+
 ## Windows
 
 * [Windows 10 Privacy Guide](https://fdossena.com/?p=w10debotnet/index_1803.frag)
