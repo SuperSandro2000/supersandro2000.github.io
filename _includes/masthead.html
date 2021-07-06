@@ -36,7 +36,7 @@
     {% if site.email %}
       <div class="{{ metadata_styles }}">
         {% octicon mail height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} color:{{ icon_color }} aria-label:email %}
-        <a href="mailto:{{ site.email }}" class="{% if site.style == 'dark' %}text-white{% endif %} u-email">
+        <a rel="me" href="mailto:{{ site.email }}" class="{% if site.style == 'dark' %}text-white{% endif %} u-email">
           {{ site.email | escape }}
         </a>
       </div>
