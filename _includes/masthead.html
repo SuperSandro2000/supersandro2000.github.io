@@ -44,7 +44,7 @@
     {% if site.pgp_key_id %}
       <div class="{{ metadata_styles }}">
         {% octicon lock height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} color:{{ icon_color }} aria-label:gpg-key %}
-        <a href="/{{ site.pgp_key_id }}.asc" class="{% if site.style == 'dark' %}text-white{% endif %} u-key">
+        <a rel="pgpkey authn" href="/{{ site.pgp_key_id }}.asc" class="{% if site.style == 'dark' %}text-white{% endif %} u-key">
           {{ site.pgp_key_id | escape }}
         </a>
       </div>
